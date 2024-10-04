@@ -396,7 +396,7 @@ describe('tus', () => {
       const stack = new tus.DefaultHttpStack({
         agent: customAgent,
       })
-      const req = stack.createRequest('GET', 'https://tusd.tusdemo.net/')
+      const req = stack.createRequest('GET', 'https://files.stage.heirloom.cloud/')
       await req.send()
       expect(req.getUnderlyingObject().agent).toBe(customAgent)
       expect(req.getUnderlyingObject().agent).not.toBe(https.globalAgent)

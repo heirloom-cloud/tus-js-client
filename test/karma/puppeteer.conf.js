@@ -14,6 +14,12 @@ module.exports = (config) => {
 
     // start these browsers
     // available browser launchers: https://www.npmjs.com/search?q=keywords:karma-launcher
-    browsers: ['ChromeHeadless'],
+    browsers: ['ChromeDebugging'],
+    customLaunchers: {
+      ChromeDebugging: {
+        base: 'Chrome',
+        flags: ['--remote-debugging-port=9333'],
+      },
+    }
   })
 }

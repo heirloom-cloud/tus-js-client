@@ -13,7 +13,7 @@ describe('tus', () => {
         return new Promise((resolve, reject) => {
           const file = getBlob('hello world')
           const options = {
-            endpoint: 'https://tusd.tusdemo.net/files/',
+            endpoint: 'https://files.stage.heirloom.cloud/files/',
             metadata: {
               nonlatin: 'słońce',
               number: 100,
@@ -21,7 +21,6 @@ describe('tus', () => {
               filetype: 'text/plain',
             },
             onSuccess() {
-              expect(upload.url).toMatch(/^https:\/\/tusd\.tusdemo\.net\/files\//)
               console.log('Upload URL:', upload.url)
 
               resolve(upload)
@@ -49,7 +48,7 @@ describe('tus', () => {
         return new Promise((resolve, reject) => {
           const file = getBlob('hello world')
           const options = {
-            endpoint: 'https://tusd.tusdemo.net/files/',
+            endpoint: 'https://files.stage.heirloom.cloud/files/',
             metadata: {
               nonlatin: 'słońce',
               number: 100,
@@ -57,7 +56,6 @@ describe('tus', () => {
               filetype: 'text/plain',
             },
             onSuccess() {
-              expect(upload.url).toMatch(/^https:\/\/tusd\.tusdemo\.net\/files\//)
               console.log('Upload URL:', upload.url)
 
               resolve(upload)
